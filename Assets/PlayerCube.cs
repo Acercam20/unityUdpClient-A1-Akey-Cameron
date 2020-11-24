@@ -5,21 +5,20 @@ using UnityEngine;
 public class PlayerCube : MonoBehaviour
 {
     public string ClientID;
-    private GameObject nw;
+    private GameObject networkManager;
     public float r, g, b;
     public Vector3 movementVector;
 
     // Start is called before the first frame update
     void Start()
     {
-        nw = GameObject.Find("NetworkMan");
+        networkManager = GameObject.Find("NetworkMan");
         InvokeRepeating("UpdatePosition", 1, 0.03f);
     }
 
     public void DestroyCube()
     {
         Destroy(gameObject);
-        Debug.Log("CUBE DESTROYED**********************");
     }
 
     void Update()
@@ -34,7 +33,7 @@ public class PlayerCube : MonoBehaviour
 
     public void UpdatePosition()
     {
-        nw.GetComponent<NetworkMan>().SendPlayerInfo(gameObject.transform.position);
+        networkManager.GetComponent<NetworkMan>().SendPlayerInfo(gameObject.transform.position);
     }
 }
 
