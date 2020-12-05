@@ -15,12 +15,12 @@ public class PlayerCube : MonoBehaviour
         networkManager = GameObject.Find("NetworkMan");
         InvokeRepeating("UpdatePosition", 1, 0.03f);
     }
-
+    
     public void DestroyCube()
     {
         Destroy(gameObject);
     }
-
+    //gjkmkffjjkjjjjjjjijiji
     void Update()
     {
         //if (nw.GetComponent<NetworkMan>().myID == this.ClientID)

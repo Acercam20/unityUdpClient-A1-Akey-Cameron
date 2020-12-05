@@ -17,7 +17,6 @@ public class NetworkMan : MonoBehaviour
     public List<string> SpawnList;
     public List<string> DestroyList;
     public List<PlayerCube> InGameList;
-    //public float mX = 1, mY = 1, mZ = 1;
 
     void Start()
     {
